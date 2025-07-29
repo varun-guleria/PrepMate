@@ -10,16 +10,19 @@ import About from "./pages/About";
 
 function App() {
   return (
-    <BrowserRouter>
-<Routes>
-  <Route path="/" element={<Index />} />
-  <Route path="/quizzes" element={<Quizzes />} />
-  <Route path="/content" element={<CuratedContent />} />
-  <Route path="/personalized-learning" element={<PersonalizedLearning />} />
-  <Route path="/time-management" element={<TimeManagement />} />
-  <Route path="/achievements" element={<Achievements />} />
-    <Route path="/about" element={<About />} />
-</Routes>
+    <BrowserRouter basename="/PrepMate">
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/quizzes" element={<Quizzes />} />
+        <Route path="/content" element={<CuratedContent />} />
+        <Route
+          path="/personalized-learning"
+          element={<PersonalizedLearning />}
+        />
+        <Route path="/time-management" element={<TimeManagement />} />
+        <Route path="/achievements" element={<Achievements />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </BrowserRouter>
   );
 }
