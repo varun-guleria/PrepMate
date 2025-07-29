@@ -1,4 +1,5 @@
 export default {
+  darkMode: "class", // <-- Correct place for dark mode
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -44,8 +45,8 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      }
+      },
     },
   },
   plugins: [],
-}
+};

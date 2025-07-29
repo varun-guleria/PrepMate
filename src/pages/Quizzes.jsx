@@ -17,7 +17,10 @@ export default function Quizzes() {
     setSubmitted(false);
     setSelectedAnswers({});
     try {
-      const response = await axios.post("http://localhost:5000/generate-quiz", { topic });
+      const response = await axios.post(
+        "https://prepmate-server-48bt.onrender.com/generate-quiz",
+        { topic }
+      );
       const quizData = Array.isArray(response.data.quiz) ? response.data.quiz : [];
       setQuiz(quizData);
       if (quizData.length === 0) setError("No quiz could be generated. Try again.");

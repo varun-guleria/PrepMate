@@ -14,11 +14,14 @@ export default function PersonalizedLearning() {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.post("http://localhost:5000/generate-roadmap", {
-        topic,
-        goal,
-        skillLevel,
-      });
+      const response = await axios.post(
+        "https://prepmate-server-48bt.onrender.com/generate-roadmap",
+        {
+          topic,
+          goal,
+          skillLevel,
+        }
+      );
 
       let roadmapData = response.data.roadmap;
 
